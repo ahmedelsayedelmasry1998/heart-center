@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+}
+@font-face{
+    src: url("../fonts/Borel/Borel-Regular.ttf");
+    font-family: Borel;
+}
+
+@font-face{
+    src: url("../fonts/Cairo/static/Cairo-Regular.ttf");
+    font-family: Cairo;
+}
+@font-face{
+    src: url("../fonts/Open_Sans/static/OpenSans-Regular.ttf");
+    font-family: 'Open Sans';
+}
+:root{
+    --mainFont:'Open Sans';
+    --arFont : Cairo;
+    --font1 : Borel;
+    --mainColor : #eee;
+    --link-bg-color : #2a3f54; 
+    --hoverColor : #169f85;
+    --textColor: #e9e9e9;
+    --color-w1 : #321fdb;
+    --color-w2 : #e55353;
+    --color-w3 : #2eb85c;
+    --color-w4 : #f9b115;
+    --color-w5 : #3399ff;
+    --color-w6 : #4f6aa3;
+}
+*{
+    box-sizing: border-box;
+    font-family: var(--mainFont);
+}
+
+.log{
+    height: 100vh;
+
+}
+
+header{
+    height: 50px;
+    background-color: var(--link-bg-color);
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+
+}
+
+.logbody{
+    height: calc(100vh - 100px);
+    background-color: #eee;
+    padding-top: 20vh;
+}
+form{
+    /* background-color: #2eb85c; */
+    width: 50%;
+    margin: 0 auto;
+}
+
+input[type="text"],
+input[type="password"]{
+    display: block;
+    margin: 2% auto;
+    width: 70%;
+    height: 50px;
+    text-align: center;
+    outline: 0;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+}   
+form div{
+    width: 70% ;
+    margin: 3% auto;
+}
+
+input[type="submit"]{
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: var(--link-bg-color);
+    color: white;
+    cursor: pointer;
+}
+footer{
+    height: 50px;
+    background-color: var(--link-bg-color);
+    text-align: center;
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: bolder;
+    color: white;
+}
+input[type="text"]:focus,
+input[type="password"]:focus
+{
+    outline: rgba(137, 207, 240, .4) solid 2px;
+}
+@media (max-width: 990px){
+    form{
+        width : 98%
+    }
+}
+
+@media (max-width: 767px){
+    form{
+        width : 98%
+    }
+    .logbody{
+        padding-top: 25vh;
+    }
+    input[type="text"],
+    input[type="password"]{
+        width: 100%;
+        font-size: 14px;
+        height: 40px;
+        margin-bottom: 4%;
+    }
+    form div{
+        width: 100% ;
+    }
+    input[type="submit"]{
+        font-size: 16px;
+    }
+}
+
+.error{
+    text-align: center;
+    font-size: 18px;
+    color: red;
+    font-weight: bolder;
+    margin: 2% auto;
+}
